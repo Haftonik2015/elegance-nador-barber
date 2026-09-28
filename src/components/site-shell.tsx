@@ -145,7 +145,7 @@ function MobileBar() {
     <div className="fixed inset-x-0 bottom-0 z-40 grid h-[4.25rem] grid-cols-3 border-t border-border bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
       <a href={phoneHref} className="flex flex-col items-center justify-center gap-1 border-e border-border text-[.62rem] font-semibold uppercase [letter-spacing:.08em]"><Phone className="size-4 text-gold" />{t.call}</a>
       <a href={mapsUrl} target="_blank" rel="noreferrer" className="flex flex-col items-center justify-center gap-1 border-e border-border text-[.62rem] font-semibold uppercase [letter-spacing:.08em]"><MapPin className="size-4 text-gold" />{t.direction}</a>
-      <a href={phoneHref} className="flex flex-col items-center justify-center gap-1 bg-gold text-[.62rem] font-bold uppercase text-gold-foreground [letter-spacing:.06em]"><CalendarDays className="size-4" />{t.book}</a>
+      <a href={phoneHref} className="flex flex-col items-center justify-center gap-1 bg-gold text-[.62rem] font-bold uppercase text-gold-foreground [letter-spacing:.06em]"><CalendarDays className="size-4" />{locale === "fr" ? "Rendez-vous" : "موعد"}</a>
     </div>
   );
 }
