@@ -69,6 +69,7 @@
   --color-canvas-foreground: var(--canvas-foreground);
   --color-canvas-muted: var(--canvas-muted);
   --color-canvas-border: var(--canvas-border);
+  --color-image-caption: var(--image-caption);
 }
 
 :root {
@@ -99,6 +100,7 @@
   --canvas-foreground: oklch(0.15 0.006 80);
   --canvas-muted: oklch(0.44 0.012 80);
   --canvas-border: oklch(0.78 0.018 80);
+  --image-caption: oklch(0.08 0.003 80 / 0.86);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);

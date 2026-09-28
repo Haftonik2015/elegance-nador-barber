@@ -1,24 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Experience, FinalCta, GalleryPreview, Hero, Introduction, LocationBlock, ReviewsBlock, ServicesGrid } from "@/components/site-sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Élégance Barber — Barbier & coiffeur homme à Nador" },
+      { name: "description", content: "Coiffeure Elégance, barber shop à Nador. Coupe homme, fade, barbe et finitions, ouvert tous les jours de 10h à 23h." },
+      { property: "og:title", content: "Élégance Barber — Barbier à Nador" },
+      { property: "og:description", content: "Coiffure homme, barbe et finitions à Nador. Ouvert 7j/7 de 10h à 23h." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "BarberShop", name: "Coiffeure Elégance Barbier Barbershop", alternateName: "حلاقة الأناقة", address: { "@type": "PostalAddress", streetAddress: "5 Rue Marrakech", addressLocality: "Nador", postalCode: "62000", addressCountry: "MA" }, telephone: "+212681718600", openingHours: "Mo-Su 10:00-23:00", aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "83" } }) }],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+function HomePage() {
+  return <><Hero /><Introduction /><ServicesGrid preview /><Experience /><GalleryPreview /><ReviewsBlock /><LocationBlock /><FinalCta /></>;
 }
