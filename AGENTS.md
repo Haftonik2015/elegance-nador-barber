@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the marketing site bilingual through one shared locale context so every route switches consistently between French and full RTL Arabic.
+- Keep all public sections as dedicated TanStack routes so navigation, sharing, and local SEO remain page-specific.
