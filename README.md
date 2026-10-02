@@ -18,10 +18,10 @@ Créer un design **haut de gamme, masculin, élégant et minimaliste**, inspiré
 
 Palette :
 
-* noir profond
-* anthracite
-* blanc cassé
-* touches de doré très discrètes
+- noir profond
+- anthracite
+- blanc cassé
+- touches de doré très discrètes
 
 Utiliser de grandes typographies élégantes, des photos immersives, beaucoup d'espace, des animations douces et une excellente hiérarchie visuelle.
 
@@ -77,12 +77,12 @@ Présenter brièvement le salon comme une adresse moderne de coiffure et barber 
 
 Créer des cartes élégantes :
 
-* Coupe Homme
-* Dégradé / Fade
-* Barbe
-* Coupe + Barbe
-* Contours & Finitions
-* Coiffure Enfant
+- Coupe Homme
+- Dégradé / Fade
+- Barbe
+- Coupe + Barbe
+- Contours & Finitions
+- Coiffure Enfant
 
 Ne pas afficher de prix : ils ne sont pas encore fournis.
 
@@ -179,14 +179,14 @@ Sur mobile, ajouter une barre fixe avec :
 
 Ne jamais inventer :
 
-* prix
-* employés
-* promotions
-* certifications
-* réseaux sociaux
-* avis clients
-* photos réelles
-* services non confirmés
+- prix
+- employés
+- promotions
+- certifications
+- réseaux sociaux
+- avis clients
+- photos réelles
+- services non confirmés
 
 Si une information manque, prévoir un emplacement facilement modifiable.
 
@@ -217,3 +217,7 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## SEO en production
+
+Configurez `VITE_SITE_URL` avec l’origine publique du site dans l’environnement de build. Le site s’en sert pour produire des URL canoniques absolues et des cartes de partage Open Graph/Twitter sur chaque route. Laissez cette variable vide en local; ne définissez pas `localhost` comme domaine de production.
